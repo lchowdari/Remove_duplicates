@@ -1,0 +1,12 @@
+val list =
+  Source
+    .fromFile("/home/nikhil/Desktop/Datasets/abc.csv").drop(1)
+    .getLines()
+    .filter(line => !line.isEmpty)
+    .map { line =>
+      val value = line.split(",")
+      (value(0), value(1))
+    }.toList
+
+  val test = list.toSet
+  test.foreach(println)
