@@ -1,6 +1,6 @@
 val list =
   Source
-    .fromFile("/home/nikhil/Desktop/Datasets/abc.csv").drop(1)
+    .fromFile("data.csv").drop(1)
     .getLines()
     .filter(line => !line.isEmpty)
     .map { line =>
